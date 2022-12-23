@@ -1,0 +1,66 @@
+* {
+    background-color: black;
+    color: aqua;
+    font-family: monospace;
+}
+
+#firstp {
+
+    width: 700px;
+    text-indent: 30px;
+    margin-left: 20px;
+
+}
+
+.h {
+
+    color: #9D00FF;
+    margin-left: 10px;
+
+}
+
+#form, #name, #email, #message {
+
+    color: orangered;
+    margin-left: 20px;
+
+}
+
+#name, #email, #message {
+    display: block;
+    margin: 2px;
+    border-color: orangered;
+
+}
+
+li {
+
+    max-width: 250px;
+    display: flexbox;
+    margin: 5px;
+
+}
+
+#t1 {
+
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: -70px;
+
+}
+
+button {
+
+    border-color: #222222;
+    background-color: #222222;
+    color: orangered;
+    display: block;
+    margin-top: 2px;
+    
+
+}
+
+button:hover {
+
+    background-color: #333333;
+
+}
