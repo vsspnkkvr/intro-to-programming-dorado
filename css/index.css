@@ -41,6 +41,22 @@ li {
 
 }
 
+#skills ul {
+
+    max-width: 500px;
+    display: flex;
+    flex: auto;
+    max height: 500px;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+#skills li {
+
+    margin: 10px;
+
+}
+
 #t1 {
 
     font-family: 'Courier New', Courier, monospace;
@@ -62,5 +78,40 @@ button {
 button:hover {
 
     background-color: #333333;
+
+}
+
+.navbar { 
+
+    margin-top: -20px;
+    margin-right: 80%;
+    display: flex;
+
+}
+
+.navbar a, a:link, a:visited, a:active {
+
+    margin: 5px;
+    color: orangered;
+    flex: auto;
+    text-decoration: none;
+    border-color: #222222;
+    background-color: #222222;
+    text-align: center;
+
+}
+
+.navbar a:hover {
+
+    background-color: #333333;
+
+}
+
+@media (max-width: 600px) {
+
+    #firstp {
+
+        width: 500px;
+    }
 
 }
