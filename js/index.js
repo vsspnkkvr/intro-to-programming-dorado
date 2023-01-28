@@ -79,37 +79,42 @@ messageForm.addEventListener('submit', (event) => {
     document.querySelector('#form').reset();
 });
 
-let githubRequest = new XMLHttpRequest();
-
-githubRequest.open('GET', 'https://api.github.com/users/vsspnkkvr/repos')
-
-
-githubRequest.onload = function() {
-
-    let repos = JSON.parse(githubRequest.response);
+fetch('https://api.github.com/users/vsspnkkvr/repos', {mode: 'cors'})
     
-    console.log(repos);
+    .then(function(response) {
+        
+        return response.json();
 
-    renderHTML(repos);
+    })
 
-};
+    .then(function(response) {
 
-githubRequest.send();
+        let repos = response;
+
+        renderHTML(repos);
+    
+    })
+    
+    .catch(function(err) {
+        
+        console.log('Error: failed to fetch github json data');
+        
+});
 
 function renderHTML(repos) {
 
-let projectSection = document.querySelector("#projects");
+    let projectSection = document.querySelector("#projects");
 
-let projectList = projectSection.querySelector("#ul2");
+    let projectList = projectSection.querySelector("#ul2");
 
-for (let i=0; i < repos.length; i++) {
+    for (let i=0; i < repos.length; i++) {
 
-    const project = document.createElement("li");
+        const project = document.createElement("li");
 
-    project.innerHTML = `<li><a href="${repos[i].clone_url}">${repos[i].name}</a></li>`
+        project.innerHTML = `<li><a href="${repos[i].clone_url}">${repos[i].name}</a></li>`
 
-    projectList.appendChild(project);
+        projectList.appendChild(project);
 
-}
+    }
 
 }
