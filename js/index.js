@@ -79,3 +79,37 @@ messageForm.addEventListener('submit', (event) => {
     document.querySelector('#form').reset();
 });
 
+let githubRequest = new XMLHttpRequest();
+
+githubRequest.open('GET', 'https://api.github.com/users/vsspnkkvr/repos')
+
+
+githubRequest.onload = function() {
+
+    let repos = JSON.parse(githubRequest.response);
+    
+    console.log(repos);
+
+    renderHTML(repos);
+
+};
+
+githubRequest.send();
+
+function renderHTML(repos) {
+
+let projectSection = document.querySelector("#projects");
+
+let projectList = projectSection.querySelector("#ul2");
+
+for (let i=0; i < repos.length; i++) {
+
+    const project = document.createElement("li");
+
+    project.innerHTML = `<li><a href="${repos[i].clone_url}">${repos[i].name}</a></li>`
+
+    projectList.appendChild(project);
+
+}
+
+}
