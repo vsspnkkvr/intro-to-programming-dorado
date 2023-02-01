@@ -1,14 +1,27 @@
 * {
+
     background-color: black;
     color: aqua;
     font-family: monospace;
+    zoom: 1.2;
+
 }
 
-#firstp {
+#rain {
 
-    width: 700px;
+margin-bottom: -1900px;
+margin-left: 60%;
+display: block;
+
+}
+
+#firstp, #secondp, #thirdp {
+
     text-indent: 30px;
     margin-left: 20px;
+    line-height: 1.5em;
+    margin-right: 36%;
+    display: flex;
 
 }
 
@@ -21,7 +34,7 @@
 
 #form, #name, #email, #message {
 
-    color: orangered;
+    color: aqua;
     margin-left: 20px;
 
 }
@@ -29,7 +42,7 @@
 #name, #email, #message {
     display: block;
     margin: 2px;
-    border-color: orangered;
+    border-color: #9D00FF;
 
 }
 
@@ -72,7 +85,6 @@ button {
     display: block;
     margin-top: 2px;
     
-
 }
 
 button:hover {
@@ -84,7 +96,7 @@ button:hover {
 .navbar { 
 
     margin-top: -20px;
-    margin-right: 80%;
+    margin-right: 36%;
     display: flex;
 
 }
@@ -109,9 +121,31 @@ button:hover {
 
 @media (max-width: 600px) {
 
-    #firstp {
+    #firstp, #secondp, #thirdp {
 
         width: 500px;
     }
+
+    .navbar {
+
+    max-width: 500px;
+    display: flex;
+    flex: auto;
+    max height: 500px;
+    flex-direction: row;
+    flex-wrap: wrap; 
+
+    }
+
+    #artDiv {
+
+        display: none;
+
+    }
+}
+
+#ul2 {
+
+    list-style-type: none;
 
 }

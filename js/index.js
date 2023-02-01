@@ -1,5 +1,150 @@
 console.log("test");
 
+document.body.style.transform = 2;
+
+const body = document.querySelector("#artDiv");
+
+const rain = document.createElement('pre')
+
+rain.setAttribute('id','rain');
+
+// #region innerHTML code (ascii art)
+rain.innerHTML = 
+ 
+`
+                ⠀⠀⠀⠀⠀⠀⡸⠱⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠛⡖⢆⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⢠⠃⠀⢣⠀⠀⠀⠀⠀⠀⠀⢀⢴⠇⠀⢱⢸⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⡜⠀⠀⠀⢇⠀⠀⠀⠀⠀⢐⣁⠎⠀⠀⠀⣿⠀⠀⠀⠀⢀⡠⠊
+                ⠀⠀⠀⠀⢀⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⢀⠔⠁⢀⣴
+                ⠀⠀⠀⠀⡘⠀⢀⡠⡤⣀⠀⠀⠀⠀⠀⣀⠤⡤⢄⡀⠀⠀⡄⡠⠂⠀⣴⠟⠁
+                ⠀⠀⠀⢠⠃⡰⠁⢠⡇⠈⢢⠀⠀⠀⡐⠁⢀⣿⠀⠑⡄⠀⢳⠁⢠⡾⠁⠀⠀
+                ⠀⠀⢠⠇⢠⠃⠀⢸⣿⠀⠀⡇⠀⢰⠁⠀⢸⣿⠀⠀⢰⠀⢸⢠⡟⠀⠀⠀⢀
+                ⠀⡰⠃⠀⠸⡄⠀⢸⣿⠀⠀⡇⠀⠘⡄⠀⠸⣿⠀⠀⣸⠃⠘⣿⣁⣀⠠⠔⠉
+                ⢼⠀⠀⠀⠀⠘⠤⣈⣏⡠⠊⠀⠀⠀⠈⠢⢀⣇⠠⠖⠁⠀⠀⡗⠉⠀⠀⣀⠄
+                ⠈⠲⢄⡀⠀⠀⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠼⡣⠤⠐⠉⠀⠀
+                ⠀⠀⠀⡌⠑⡢⣤⣀⣀⡀⠀⠀⠀⢀⣀⣀⣠⡤⢶⡶⠋⢁⡼⠇⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠃⠀⢣⠈⠳⣤⣀⠉⠉⠉⠉⢀⣀⡠⠔⠁⢠⠂⡴⠁⢸⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⢸⠀⠠⡈⠑⠊⠭⢙⡻⠟⠋⠀⢀⠔⢁⠜⠀⠀⠀⢃⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⢆⠀⠈⠓⠒⠈⠁⠀⠀⢀⠔⠁⡠⠊⠀⠀⠀⠀⢸⡀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀⠀⠀⠠⠊⠁⣠⡎⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⢸⠈⢆⠀⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⢰⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⡆⠀⠑⢤⣀⢴⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⢡⠀⠀⠘⡀⡜⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀
+
+
+                ⠀⠀⠀⠀⠀⠀⢀⡤⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⢀⣴⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⠀⢀⣴⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⢀⣾⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⣼⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⢰⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⢸⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⢸⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⢸⣿⣿⣿⣿⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                ⠀⢿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠃
+                ⠀⠘⣿⣿⣿⣿⣿⣿⣿⣷⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣴⣿⠏⠀
+                ⠀⠀⠘⢿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣤⣀⣀⣀⣀⣀⣀⣠⣤⣶⣿⣿⣿⠋⠀⠀
+                ⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠈⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠁⠀⠀⠀⠀⠀
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠿⠿⠟⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀
+
+
+
+
+                        start >:) -->
+                .--.--.--.--.--.--.--.  .--.--.--.--.--.--.--.
+                |                    |        |     |     |  |
+                :  :--:  :--:--:--:--:  :--:  :  :  :  :  :  :
+                |     |     |              |     |     |  |  |
+                :--:  :--:  :  :--:--:--:  :--:--:--:  :  :  :
+                |     |     |     |     |           |  |  |  |
+                :--:--:  :--:  :--:  :  :--:--:  :  :  :  :  :
+                |        |     |     |           |  |  |     |
+                :  :--:--:  :--:  :  :--:  :--:--:  :  :--:--:
+                |           |     |     |  |     |  |  |     |
+                :--:--:--:--:  :--:--:  :--:  :--:  :  :  :  :
+                |           |  |     |     |     |  |     |  |
+                :  :  :  :--:  :  :  :--:  :--:  :  :--:--:  :
+                |  |  |     |  |  |     |        |     |  |  |
+                :  :  :--:  :  :  :--:  :--:--:--:--:  :  :  :
+                |  |     |           |  |           |  |     |
+                :--:--:  :--:--:--:  :--:  :--:--:  :  :--:--:
+                |     |  |     |           |     |  |  |     |
+                :  :  :--:  :  :  :--:--:--:  :  :  :  :  :  :
+                |  |  |     |  |           |  |  |  |     |  |
+                :  :  :  :--:--:  :--:--:  :  :  :--:--:--:  :
+                |  |  |  |     |     |     |  |        |     |
+                :  :  :  :  :  :--:  :  :--:--:  :--:  :  :--:
+                |  |     |  |  |     |        |     |  |     |
+                :  :--:--:  :  :--:--:--:--:  :  :  :--:--:  :
+                |        |  |     |     |     |  |  |     |  |
+                :  :--:  :  :--:  :  :  :  :--:--:  :  :  :  :
+                |  |     |  |     |  |     |     |  |  |  |  |
+                :  :  :--:  :  :--:  :--:--:  :  :  :  :--:  :
+                |  |     |  |  |              |     |     |  |
+                :  :  :--:  :--:  :--:--:--:--:  :--:  :  :  :
+                |  |     |        |           |     |  |     |
+                :  :--:  :--:--:--:  :--:--:  :--:  :--:--:--:
+                |  |     |           |        |  |           |
+                :  :  :--:--:--:--:  :  :--:--:  :  :--:--:  :
+                |  |     |     |     |  |     |     |     |  |
+                :  :--:  :  :  :  :--:  :  :--:  :--:  :  :--:
+                |  |     |  |  |     |     |     |     |     |
+                :  :--:--:  :  :  :  :--:--:  :--:  :--:--:  :
+                |  |        |  |  |  |     |  |        |     |
+                :  :  :  :--:  :  :  :  :  :  :--:--:  :  :--:
+                |     |     |  |  |  |  |  |           |  |  |
+                :  :--:--:  :  :  :  :  :--:  :--:--:--:  :  :
+                |     |     |     |  |  |     |        |  |  |
+                :--:--:  :--:--:  :--:  :  :  :  :--:  :  :  :
+                |        |     |  |     |  |  |     |  |  |  |
+                :  :--:--:  :--:  :  :--:  :  :  :  :--:  :  :
+                |        |     |  |        |  |  |     |  |  |
+                :--:--:  :  :  :  :--:--:--:--:  :  :  :  :  :
+                |     |  |  |  |     |     |     |  |  |     |
+                :  :  :  :--:  :  :--:  :  :  :  :--:  :  :--:
+                |  |           |        |     |  |           |
+                :--:--:--:--:--:--:--:--:--:--:--:  :--:--:--:
+                                                --> end :)
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣾⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⠆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠿⠋⠛⠻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠃⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠁⠀⠀⠀⠀⠀⠀⠀⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠔⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⡔⠉⠀⠀⠀⠀⣠⣴⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠱⣄⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⣤⣤⣤⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢠⠋⣠⣦⣟⣻⣦⣼⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢶⠒⠛⠉⠉⠀⠀⠀⠀⠀⣹⣿⣿⣿⣦⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢸⠀⡏⠿⣎⣿⠏⠹⠟⠿⠟⠁⠀⠀⠀⠀⠀⠀⠀⢀⣴⣶⣶⣤⠀⠈⠃⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣷⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⡆⠛⠷⠟⢻⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⣀⡠⠜⠛⠛⢯⣙⠿⣿⣷⣄⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠹⡄⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⡿⠃⠀⠀⡀⠀⣠⠴⠊⠁⠀⠀⠀⠀⠀⠈⠓⢽⣿⣿⣷
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢳⡀⠀⠘⢿⣿⣿⣿⣷⣆⠀⠀⠀⠀⠀⠀⠈⠻⢿⠿⠛⠡⣄⠀⢠⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠳⡀⠀⠀⠀⠀⠀⠸⣿⣤⣤⡀⠀⠀⠀⣤⣲⣖⠢⡀⠀⠀⠀⡜⠀⠀⠀⠀⠀⠀⠀⣀⣤⢄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣦⡀⠀⠀⠀⠀⠈⠉⠻⣿⣤⣤⣿⣶⠆⣩⠿⠅⠀⠀⡜⠁⠀⠀⠀⢀⡤⠖⠋⠀⣾⠈⣧⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠏⠀⠑⠦⢀⠀⠀⠀⠀⠙⠻⣋⣩⣭⣶⣞⠋⠀⢀⡞⠀⠀⠀⣠⠖⠉⠀⠀⠀⠀⢻⡀⢸⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠏⠀⠀⠀⠀⠀⠀⠀⠐⢲⡤⠀⠈⠉⠉⠁⣀⡠⠴⠋⠀⠀⡠⠎⠁⠀⢀⡠⠄⠀⠀⠸⡀⢸⠄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢙⡏⠉⠉⠉⠁⠀⠀⠀⣠⠞⠁⢀⣤⠞⣉⠄⠀⢀⡠⢔⡳⠋⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⡎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣄⠀⠀⠀⠀⠀⢰⠁⠀⠀⠛⠐⠋⣀⠤⣒⡭⠒⠋⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢦⠀⠀⠀⠀⠈⢦⡀⠀⢠⠴⠟⠚⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢰⠁⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⣾⣇⠀⠀⠀⠀⠈⢷⠀⠀⢀⡴⠋⠀⠀⠈⢇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⡏⠀⠀⠀⠀⠀⠀⢸⡗⠀⠀⠀⠸⣿⠀⠀⠀⠀⠀⠀⢧⠀⢏⠀⠈⢳⡶⠟⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣸⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡄⠀⣳⠄⠀⡃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧⡞⢁⡴⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠻⣗⣒⠒⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠓⠤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⣠⠤⠖⠛⣛⡻⢶⣄⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⢠⣤⣤⣄⣀⣀⣈⣱⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠉⠉⠉⠉⠉⠗⠚⠹⣤⡖⠊⠉⠻⠿⠋⠑⢦⣄⣴⠿⣽⣿⠒⠲⣤⣤⣀⣈⡷⠤⠤⠵⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+` 
+;
+// #endregion
+
+body.appendChild(rain);
+
 const today = new Date();
 
 let thisYear = today.getFullYear();
@@ -10,9 +155,26 @@ const footer = document.querySelector("#footer");
 
 const copyright = document.createElement("p");
 
-copyright.innerText = "Natalie Petrolino " + thisYear;
+
+copyright.setAttribute('id','copyright');
+
+copyright.innerText = "Natalie Petrolino (aka vsspnkr) " + thisYear + " ฅ^._.^ฅ";
 
 footer.appendChild(copyright);
+
+
+window.addEventListener("load", function() {
+    
+    let catblink = document.getElementById('copyright');
+    
+    setInterval(function() {
+        
+        catblink.innerText = (catblink.innerText == 'Natalie Petrolino (aka vsspnkr) ' + thisYear + ' ฅ^._.^ฅ' ? 'Natalie Petrolino (aka vsspnkr) ' + thisYear + ' ฅ^u_u^ฅ' : 'Natalie Petrolino (aka vsspnkr) ' + thisYear + ' ฅ^._.^ฅ');
+
+    }, 1000);
+
+}, false);
+
 
 const skills = ["beginner coding", "creative writing", "essay writing", "music production",
 "video editing and production", "dlsr photography and videography" ];
@@ -28,6 +190,7 @@ for (let i=0; i < skills.length; i++) {
     skill.innerText = skills[i];
 
     skillsList.appendChild(skill);
+
 }
 
 const name = document.querySelector("#name");
@@ -37,25 +200,25 @@ const message = document.querySelector("#message");
 
 const messageForm = document.querySelector('#form')
 
+const messageSection = document.querySelector("#messages");
+
+let messageCounter = 0 
+
+messageSection.style.display = "none";
 
 messageForm.addEventListener('submit', (event) => {
 
     event.preventDefault();
-
-    // const nameInput = event.target.name
-    // const emailInput = event.target.email
-    // const messageInput = event.target.message   I couldnt figure out the way the hw meant for me to do
-
-
-    // console.log(nameInput);
-    // console.log(emailInput);
-    // console.log(messageInput);
     
-    const messageSection = document.querySelector("#messages");
-    
+    messageSection.style.display = "block";
+
+    messageCounter++;
+        
     const messageList = document.querySelector("#messageslist");
 
     const newMessage = document.createElement("li");
+
+    newMessage.setAttribute('id', 'newmessage');
     
     newMessage.innerHTML = `<a href="mailto:${email.value}">${name.value}</a><span> ${message.value} </span>`
 
@@ -70,13 +233,25 @@ messageForm.addEventListener('submit', (event) => {
     newMessage.appendChild(removeButton);
 
     removeButton.addEventListener('click', (event) => {
-
+        
+        messageCounter--;
+        
         messageList.removeChild(newMessage);
+       
+        console.log(messageCounter);
+
+        if (messageCounter === 0) {
+
+            messageSection.style.display = "none";
     
-    
+        }
+
     });
+    
+    console.log(messageCounter);
 
     document.querySelector('#form').reset();
+    
 });
 
 fetch('https://api.github.com/users/vsspnkkvr/repos', {mode: 'cors'})
@@ -98,7 +273,7 @@ fetch('https://api.github.com/users/vsspnkkvr/repos', {mode: 'cors'})
     .catch(function(err) {
         
         console.log('Error: failed to fetch github json data');
-        
+
 });
 
 function renderHTML(repos) {
@@ -111,7 +286,7 @@ function renderHTML(repos) {
 
         const project = document.createElement("li");
 
-        project.innerHTML = `<li><a href="${repos[i].clone_url}">${repos[i].name}</a></li>`
+        project.innerHTML = `<a href="${repos[i].clone_url}">${repos[i].name}</a>`
 
         projectList.appendChild(project);
 
