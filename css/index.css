@@ -113,7 +113,7 @@ button:hover {
 
 }
 
-.navbar a:hover {
+ a:hover {
 
     background-color: #333333;
 
@@ -147,5 +147,13 @@ button:hover {
 #ul2 {
 
     list-style-type: none;
+
+}
+
+#copyright {
+
+    padding-top: 15%;
+    display: block;
+    bottom: 0;    
 
 }

@@ -7,6 +7,7 @@ const body = document.querySelector("#artDiv");
 const rain = document.createElement('pre')
 
 rain.setAttribute('id','rain');
+rain.setAttribute('aria-hidden', 'true');
 
 // #region innerHTML code (ascii art)
 rain.innerHTML = 
